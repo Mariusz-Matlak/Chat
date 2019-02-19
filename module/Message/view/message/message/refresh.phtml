@@ -1,0 +1,10 @@
+<?php foreach ($messages as $oneMessage): ?>
+    <tr>
+        <td>
+            <?= $this->escapeHtml(date('Y-m-d H:i:s', $oneMessage->getCreatedAt())); ?>
+        </td>
+        <td>
+            <?= $this->escapeHtml($oneMessage->getContent()); ?>
+        </td>
+    </tr>
+<?php endforeach; ?>
